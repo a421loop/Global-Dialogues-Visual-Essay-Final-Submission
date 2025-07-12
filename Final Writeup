@@ -4,8 +4,6 @@
 
 (AI)DENTITY is a data-driven story that explores how 59,542 global survey participants connect with artificial intelligence in unique and meaningful ways. These diverse perspectives have been thoughtfully organized into 5 distinct personas that reveal fascinating insights about human-AI relationships. This document provides comprehensive technical documentation of both the backend data analysis pipeline and the frontend interactive web application.
 
-
-
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
@@ -17,22 +15,20 @@
 7. [Deployment Architecture](#deployment-architecture)
 8. [Future Enhancement Possibilities](#future-enhancement-possibilities)
 
----
-
 ## Project Overview
 
 ### Key Statistics
-- **Total Participants**: 59,542
-- **Number of Personas**: 5
-- **Data Sources**: Global Dialogues (GD1, GD2, GD3)
-- **Features Analyzed**: 10 comprehensive metrics
-- **Technologies**: Python (backend), React + D3.js + Plotly (frontend)
+- Total Participants: 59,542
+- Number of Personas: 5
+- Data Sources: Global Dialogues (GD1, GD2, GD3)
+- Features Analyzed: 10 comprehensive metrics
+- Technologies**: Python (backend), React + D3.js + Plotly (frontend)
 
 ### Project Goals
-1. Uncover the cultural story hidden in the data - Transform 59,542 voices into a compelling narrative that reveals how different communities around the world actually think about AI, beyond the headlines and hype. 
-Make the invisible visible through design - Use scrollytelling and interactive visualizations to turn abstract survey responses into tangible, relatable human stories that inform and entertain
-Create personal discovery moments - Enable readers to see themselves in the data through an interactive experience that connects individual perspectives to global patterns
-Tell the story you didn't know you needed - Reveal the nuanced, surprising ways people relate to AI technology - moving beyond the typical "AI good vs. AI bad" narrative to show the rich spectrum of human attitudes toward our technological future
+1. Uncover the cultural story hidden in the data: Transform 59,542 voices into a compelling narrative that reveals how different communities around the world actually think about AI, beyond the headlines and hype. 
+2. Make the invisible visible through design: Use scrollytelling and interactive visualizations to turn abstract survey responses into tangible, relatable human stories that inform and entertain
+3. Create personal discovery moments - Enable readers to see themselves in the data through an interactive experience that connects individual perspectives to global patterns
+4. Tell the story you didn't know you needed - Reveal the nuanced, surprising ways people relate to AI technology - moving beyond the typical "AI good vs. AI bad" narrative to show the rich spectrum of human attitudes toward our technological future
 
 ---
 
@@ -42,14 +38,14 @@ Tell the story you didn't know you needed - Reveal the nuanced, surprising ways 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        DATA PIPELINE                         │
+│                        DATA PIPELINE                        │
 ├─────────────────────────────────────────────────────────────┤
 │  Raw Survey Data → Python Analysis → JSON/CSV Outputs       │
 │  (GD1, GD2, GD3)   (Clustering)      (Personas & Viz)       │
 └─────────────────────────────────────────────────────────────┘
                                ↓
 ┌─────────────────────────────────────────────────────────────┐
-│                    WEB APPLICATION                           │
+│                    WEB APPLICATION                          │
 ├─────────────────────────────────────────────────────────────┤
 │  React App → D3.js/Plotly → Scrollytelling Interface        │
 │  (Frontend)   (Dataviz)      (User Experience)              │
@@ -58,21 +54,21 @@ Tell the story you didn't know you needed - Reveal the nuanced, surprising ways 
 
 ### Technology Stack
 
-**Backend Technologies:**
+####Backend Technologies:
 - Python 3.8+
 - pandas (data manipulation)
 - scikit-learn (machine learning)
 - Plotly (visualization generation)
 - NumPy (numerical computing)
 
-**Frontend Technologies:**
+####Frontend Technologies:
 - React 18
 - D3.js (data visualization)
 - Plotly.js (interactive charts)
 - Tailwind CSS (styling)
 - Intersection Observer API (scrollytelling)
 
----
+
 
 ## Backend: Data Analysis Pipeline
 
@@ -87,6 +83,7 @@ The backend is implemented in `comprehensive_persona_analysis.py` and processes 
 **Purpose**: Loads and combines three regional datasets into a unified analysis framework.
 
 **Technical Implementation**:
+
 ```python
 def load_combined_data():
     """Load and combine GD1, GD2, GD3 data"""
@@ -244,7 +241,7 @@ analysis_output/combined/personas/
     └── regional_feature_choropleth.json # Map visualization
 ```
 
----
+
 
 ## Frontend: Interactive Web Application
 
@@ -458,7 +455,6 @@ useEffect(() => {
 - Mobile-first design approach
 - Touch-friendly interaction targets
 
----
 
 ## Data Flow Architecture
 
@@ -510,7 +506,6 @@ Calculate Matching Persona
 Display Personalized Result with Avatar
 ```
 
----
 
 ## Security and Privacy Considerations
 
@@ -542,7 +537,6 @@ Display Personalized Result with Avatar
 - Static deployment capability
 - CDN-friendly architecture
 
----
 
 ## Deployment Architecture
 
@@ -596,7 +590,7 @@ npm run build
 - Minification and compression
 - Asset optimization
 
----
+
 
 ## Future Enhancement Possibilities
 
@@ -642,7 +636,6 @@ npm run build
 - High contrast mode
 - Multiple language support
 
----
 
 ## Technical Specifications Summary
 
@@ -665,7 +658,7 @@ npm run build
 - **Scroll Performance**: 60 FPS
 - **Memory Usage**: <200MB
 
----
+
 
 ## Conclusion
 
